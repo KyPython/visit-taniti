@@ -1,2 +1,12 @@
 .DS_Store
 .vercel
+feedback/inbox/
+feedback/processed/
+feedback/.venv/
+feedback/transcripts/*.raw.txt
+*.m4a
+*.mp3
+*.wav
+*.mp4
+*.mov
+*.caf
