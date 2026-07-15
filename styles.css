@@ -30,6 +30,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -41,6 +43,15 @@ body {
     var(--sand);
   line-height: 1.6;
   min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  width: 100%;
 }
 
 img {
@@ -107,11 +118,12 @@ a:hover {
 
 .brand {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: clamp(1.15rem, 4vw, 1.45rem);
   font-weight: 600;
   color: var(--ocean-deep);
   text-decoration: none;
   letter-spacing: -0.02em;
+  min-width: 0;
 }
 
 .brand span {
@@ -175,6 +187,8 @@ textarea:focus-visible {
 @media (max-width: 840px) {
   .nav-toggle {
     display: inline-flex;
+    min-height: 44px;
+    min-width: 44px;
   }
 
   .primary-nav {
@@ -189,15 +203,25 @@ textarea:focus-visible {
     padding: 0.75rem 1.25rem 1.25rem;
     border-bottom: 1px solid var(--sand-dark);
     box-shadow: var(--shadow);
+    max-height: min(80vh, 560px);
+    overflow-y: auto;
   }
 
   .primary-nav.is-open {
     display: flex;
   }
 
+  .primary-nav a {
+    padding: 0.75rem 0.35rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
   .primary-nav .nav-cta {
     text-align: center;
     margin-top: 0.35rem;
+    justify-content: center;
   }
 }
 
@@ -205,15 +229,15 @@ textarea:focus-visible {
 main {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 1.5rem 1.25rem 3rem;
+  padding: 1.25rem clamp(0.85rem, 3vw, 1.25rem) 3rem;
 }
 
 .hero {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: center;
-  margin-bottom: 2rem;
-  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  padding: clamp(1.15rem, 4vw, 1.75rem);
   border-radius: calc(var(--radius) + 4px);
   background:
     linear-gradient(135deg, rgba(10, 92, 106, 0.92), rgba(6, 66, 76, 0.88)),
@@ -225,12 +249,12 @@ main {
       rgba(255, 255, 255, 0.03) 24px
     );
   color: #fff;
-  min-height: 280px;
+  min-height: clamp(220px, 42vw, 280px);
 }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.65rem, 6.5vw, 3rem);
   line-height: 1.15;
   font-weight: 650;
   letter-spacing: -0.03em;
@@ -240,14 +264,14 @@ main {
 .hero p {
   max-width: 42ch;
   opacity: 0.95;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.8vw, 1.1rem);
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .btn {
@@ -257,11 +281,13 @@ main {
   gap: 0.4rem;
   border: 0;
   border-radius: 999px;
-  padding: 0.7rem 1.2rem;
+  padding: 0.75rem 1.2rem;
+  min-height: 44px;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 .btn-primary {
@@ -412,9 +438,11 @@ main {
   border: 1px solid var(--sand-dark);
   background: var(--panel);
   border-radius: 999px;
-  padding: 0.4rem 0.85rem;
+  padding: 0.55rem 0.95rem;
+  min-height: 44px;
   font: inherit;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .filter-btn.is-active {
@@ -464,6 +492,10 @@ th {
   font-weight: 700;
   cursor: pointer;
   color: var(--ocean-deep);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  touch-action: manipulation;
 }
 
 .faq details[open] summary {
@@ -494,11 +526,16 @@ input,
 select,
 textarea {
   font: inherit;
+  font-size: 16px; /* avoids iOS zoom-on-focus */
   padding: 0.65rem 0.75rem;
+  min-height: 44px;
   border: 1px solid var(--sand-dark);
   border-radius: 8px;
   background: #fff;
   color: var(--ink);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -572,4 +609,78 @@ textarea {
   height: auto;
   border: 1px solid #ddd;
   background: #fff;
+}
+
+/* Phones / small tablets — tighter rhythm, no sideways scroll */
+@media (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 0;
+  }
+
+  .hero-actions,
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn,
+  .filters .filter-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .table-wrap {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th,
+  td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .form-panel {
+    padding: 1rem;
+  }
+}
+
+/* Large phones / small landscape */
+@media (min-width: 641px) and (max-width: 840px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Wide screens — keep content readable */
+@media (min-width: 1200px) {
+  .hero h1 {
+    max-width: 16ch;
+  }
+}
+
+/* Safe areas (notched phones) */
+@supports (padding: max(0px)) {
+  .site-header .header-inner,
+  main,
+  .site-footer {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .site-footer {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
 }

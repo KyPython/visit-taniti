@@ -1,14 +1,33 @@
 (function () {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".primary-nav");
+
+  function setNavOpen(open) {
+    if (!toggle || !nav) return;
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
-      const open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      setNavOpen(!nav.classList.contains("is-open"));
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setNavOpen(false);
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") setNavOpen(false);
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 840) setNavOpen(false);
     });
   }
 
-  // Lodging budget filters (guerrilla testing feedback)
   const filterBtns = document.querySelectorAll("[data-filter]");
   const items = document.querySelectorAll("[data-budget]");
   if (filterBtns.length && items.length) {
@@ -27,7 +46,6 @@
     });
   }
 
-  // Booking inquiry form (prototype interaction)
   const form = document.getElementById("booking-form");
   const status = document.getElementById("form-status");
   if (form && status) {
