@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Lodging to booking wireframe</title>
+  <desc id="desc">Two-panel wireframe: lodging list with budget filters on the left flowing to booking form on the right.</desc>
+  <rect width="960" height="520" fill="#f5f5f5"/>
+  <text x="20" y="30" font-family="Arial" font-size="14" fill="#111">Lodging (filters) ' Book Visit</text>
+
+  <rect x="20" y="50" width="440" height="440" fill="#fff" stroke="#333" stroke-width="2"/>
+  <rect x="40" y="70" width="180" height="18" fill="#bbb"/>
+  <rect x="40" y="110" width="60" height="24" fill="#999"/>
+  <rect x="110" y="110" width="70" height="24" fill="#ddd"/>
+  <rect x="190" y="110" width="80" height="24" fill="#ddd"/>
+  <rect x="280" y="110" width="70" height="24" fill="#ddd"/>
+  <text x="40" y="160" font-family="Arial" font-size="11" fill="#333">Filters: All | Budget | Mid | Luxury</text>
+
+  <rect x="40" y="180" width="400" height="70" fill="#f0f0f0" stroke="#666"/>
+  <rect x="40" y="265" width="400" height="70" fill="#f0f0f0" stroke="#666"/>
+  <rect x="40" y="350" width="400" height="70" fill="#f0f0f0" stroke="#666"/>
+  <text x="55" y="220" font-family="Arial" font-size="12" fill="#333">Hotel / B&amp;B + [Request booking]</text>
+  <text x="55" y="305" font-family="Arial" font-size="12" fill="#333">Condo / beach house + [Request booking]</text>
+  <text x="55" y="390" font-family="Arial" font-size="12" fill="#333">Resort + [Request booking]</text>
+
+  <path d="M470 300 H500" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect x="520" y="50" width="420" height="440" fill="#fff" stroke="#333" stroke-width="2"/>
+  <rect x="540" y="70" width="200" height="18" fill="#bbb"/>
+  <rect x="540" y="110" width="380" height="36" fill="#eee" stroke="#999"/>
+  <rect x="540" y="160" width="380" height="36" fill="#eee" stroke="#999"/>
+  <rect x="540" y="210" width="380" height="36" fill="#eee" stroke="#999"/>
+  <rect x="540" y="260" width="380" height="36" fill="#eee" stroke="#999"/>
+  <rect x="540" y="310" width="380" height="36" fill="#eee" stroke="#999"/>
+  <rect x="540" y="360" width="380" height="60" fill="#eee" stroke="#999"/>
+  <rect x="540" y="440" width="180" height="32" fill="#888"/>
+  <text x="540" y="500" font-family="Arial" font-size="11" fill="#333">Fields: name, email, arrive, lodging, party, dates, interests</text>
+</svg>

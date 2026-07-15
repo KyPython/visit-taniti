@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request lodging and activity bookings for your Taniti trip.">
+  <title>Visit Taniti — Book Visit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Visit <span>Taniti</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="dining.html">Dining</a>
+        <a href="transportation.html">Getting Around</a>
+        <a href="visitor-info.html">Visitor Info</a>
+        <a class="nav-cta" href="book.html" aria-current="page">Book Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <h2>Book your Taniti visit</h2>
+      <p class="lede">Tell us your dates, party size, and interests. This interactive prototype shows the booking request flow missing from the outdated island site.</p>
+
+      <form id="booking-form" class="form-panel" novalidate>
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="form-row">
+          <label for="arrive">Arrival method</label>
+          <select id="arrive" name="arrive" required>
+            <option value="">Select one</option>
+            <option value="air">Air</option>
+            <option value="cruise">Cruise ship</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="lodging">Preferred lodging</label>
+          <select id="lodging" name="lodging" required>
+            <option value="">Select one</option>
+            <option value="hostel">Hostel</option>
+            <option value="hotel">Hotel / B&amp;B</option>
+            <option value="condo">Private condo / beach house</option>
+            <option value="resort">Four-star resort</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="party">Party size</label>
+          <input id="party" name="party" type="number" min="1" max="20" value="2" required>
+        </div>
+        <div class="form-row">
+          <label for="dates">Approximate dates / length of stay</label>
+          <input id="dates" name="dates" type="text" placeholder="e.g., June 10–17 (7 days)" required>
+        </div>
+        <div class="form-row">
+          <label for="interests">Activities of interest</label>
+          <textarea id="interests" name="interests" placeholder="Beaches, volcano tour, zip-lining, snorkeling…"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit booking inquiry</button>
+        <p id="form-status" class="form-status" tabindex="-1" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Visit Taniti tourism prototype</p>
+      <p><a href="lodging.html">Back to lodging</a></p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var type = params.get("type");
+      var arrive = params.get("arrive");
+      var lodging = document.getElementById("lodging");
+      var arriveSelect = document.getElementById("arrive");
+      if (type && lodging) {
+        var map = { hostel: "hostel", hotel: "hotel", condo: "condo", resort: "resort" };
+        if (map[type]) lodging.value = map[type];
+      }
+      if (arrive && arriveSelect) {
+        if (arrive === "air" || arrive === "cruise") arriveSelect.value = arrive;
+      }
+      var activity = params.get("activity");
+      var interests = document.getElementById("interests");
+      if (activity && interests && !interests.value) {
+        interests.value = "Interested in: " + activity;
+      }
+    })();
+  </script>
+</body>
+</html>

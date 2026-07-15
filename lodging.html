@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Taniti lodging options from hostel to four-star resort, filterable by budget.">
+  <title>Visit Taniti — Lodging</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Visit <span>Taniti</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lodging.html" aria-current="page">Lodging</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="dining.html">Dining</a>
+        <a href="transportation.html">Getting Around</a>
+        <a href="visitor-info.html">Visitor Info</a>
+        <a class="nav-cta" href="book.html">Book Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <h2>Lodging on Taniti</h2>
+      <p class="lede">All lodging types are regulated and inspected by the Tanitian government. Filter by budget, then request a booking with your dates.</p>
+
+      <div class="filters" role="group" aria-label="Filter lodging by budget">
+        <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-btn" data-filter="budget" aria-pressed="false">Budget</button>
+        <button type="button" class="filter-btn" data-filter="mid" aria-pressed="false">Mid-range</button>
+        <button type="button" class="filter-btn" data-filter="luxury" aria-pressed="false">Luxury</button>
+      </div>
+
+      <div class="card-grid">
+        <article class="card lodging-item" data-budget="budget">
+          <span class="badge badge-budget">Budget</span>
+          <h3>Island Hostel</h3>
+          <p>Inexpensive dorm and private rooms near Taniti City — popular with solo travelers and small groups.</p>
+          <a class="btn btn-outline" href="book.html?type=hostel">Request booking</a>
+        </article>
+        <article class="card lodging-item" data-budget="mid">
+          <span class="badge badge-mid">Mid-range</span>
+          <h3>Family hotels & B&amp;Bs</h3>
+          <p>Small, family-owned hotels and a growing number of bed and breakfasts across walkable neighborhoods.</p>
+          <a class="btn btn-outline" href="book.html?type=hotel">Request booking</a>
+        </article>
+        <article class="card lodging-item" data-budget="mid">
+          <span class="badge badge-mid">Mid-range</span>
+          <h3>Private condos & beach houses</h3>
+          <p>Self-catered stays near Yellow Leaf Bay and Merriton Landing for families and longer vacations.</p>
+          <a class="btn btn-outline" href="book.html?type=condo">Request booking</a>
+        </article>
+        <article class="card lodging-item" data-budget="luxury">
+          <span class="badge badge-luxury">Luxury</span>
+          <h3>Four-star resort</h3>
+          <p>Taniti’s large resort option with full amenities — suited to honeymoons and higher-budget vacations.</p>
+          <a class="btn btn-outline" href="book.html?type=resort">Request booking</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Visit Taniti tourism prototype</p>
+      <p><a href="book.html">Book Visit</a></p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Taniti home desktop wireframe</title>
+  <desc id="desc">Header with logo and navigation, hero block with primary and secondary CTAs, four step planning flow, and three highlight cards.</desc>
+  <rect width="960" height="620" fill="#f5f5f5"/>
+  <rect x="20" y="20" width="920" height="48" fill="#ffffff" stroke="#333" stroke-width="2"/>
+  <rect x="36" y="34" width="120" height="20" fill="#ccc"/>
+  <rect x="400" y="34" width="40" height="12" fill="#ddd"/>
+  <rect x="450" y="34" width="50" height="12" fill="#ddd"/>
+  <rect x="510" y="34" width="60" height="12" fill="#ddd"/>
+  <rect x="580" y="34" width="45" height="12" fill="#ddd"/>
+  <rect x="635" y="34" width="70" height="12" fill="#ddd"/>
+  <rect x="715" y="34" width="70" height="12" fill="#ddd"/>
+  <rect x="800" y="30" width="110" height="28" fill="#999"/>
+  <text x="36" y="90" font-family="Arial" font-size="12" fill="#333">HEADER: Logo | Home Lodging Attractions Dining Getting Around Visitor Info | [Book Visit]</text>
+
+  <rect x="20" y="110" width="920" height="160" fill="#ffffff" stroke="#333" stroke-width="2"/>
+  <rect x="48" y="140" width="360" height="28" fill="#bbb"/>
+  <rect x="48" y="180" width="480" height="14" fill="#ddd"/>
+  <rect x="48" y="202" width="420" height="14" fill="#ddd"/>
+  <rect x="48" y="230" width="140" height="28" fill="#888"/>
+  <rect x="200" y="230" width="150" height="28" fill="#ccc" stroke="#666"/>
+  <text x="48" y="270" font-family="Arial" font-size="12" fill="#333">HERO: Welcome message + Start planning / Explore attractions</text>
+
+  <text x="20" y="310" font-family="Arial" font-size="14" fill="#111">Planning flow (4 steps)</text>
+  <rect x="20" y="320" width="210" height="90" fill="#fff" stroke="#333" stroke-dasharray="4 3"/>
+  <rect x="250" y="320" width="210" height="90" fill="#fff" stroke="#333" stroke-dasharray="4 3"/>
+  <rect x="480" y="320" width="210" height="90" fill="#fff" stroke="#333" stroke-dasharray="4 3"/>
+  <rect x="710" y="320" width="210" height="90" fill="#fff" stroke="#333" stroke-dasharray="4 3"/>
+  <text x="40" y="370" font-family="Arial" font-size="12" fill="#333">1 Lodging</text>
+  <text x="270" y="370" font-family="Arial" font-size="12" fill="#333">2 Attractions</text>
+  <text x="500" y="370" font-family="Arial" font-size="12" fill="#333">3 Transport</text>
+  <text x="730" y="370" font-family="Arial" font-size="12" fill="#333">4 Book</text>
+
+  <text x="20" y="450" font-family="Arial" font-size="14" fill="#111">Highlight cards</text>
+  <rect x="20" y="460" width="290" height="120" fill="#fff" stroke="#333"/>
+  <rect x="335" y="460" width="290" height="120" fill="#fff" stroke="#333"/>
+  <rect x="650" y="460" width="290" height="120" fill="#fff" stroke="#333"/>
+  <text x="40" y="520" font-family="Arial" font-size="12" fill="#555">Beaches</text>
+  <text x="355" y="520" font-family="Arial" font-size="12" fill="#555">Volcano / rainforest</text>
+  <text x="670" y="520" font-family="Arial" font-size="12" fill="#555">Lodging &amp; arrival</text>
+</svg>

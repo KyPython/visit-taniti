@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Production UX standards applied to the Visit Taniti prototype: evidence gates, accessibility, clarity, and iterative quality.">
+  <title>Visit Taniti — Design Standards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Visit <span>Taniti</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="dining.html">Dining</a>
+        <a href="transportation.html">Getting Around</a>
+        <a href="visitor-info.html">Visitor Info</a>
+        <a class="nav-cta" href="book.html">Book Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <h2>Production design standards</h2>
+      <p class="lede">This prototype was built to portfolio/production bar—not a decorative mock. Each standard below maps to a concrete UX decision for Taniti tourists and the one-month government timeline.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <span class="badge">Evidence-first</span>
+          <h3>Spec before pixels</h3>
+          <p>Information architecture and content come from the Survey Results and About the Island documents (origins, lodging mix, attractions, transport, FAQ). No decorative inventing of services the island does not offer.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Quality gates</span>
+          <h3>Iterate with fail-close gates</h3>
+          <p>Wireframe → guerrilla feedback → interactive prototype → formal peer usability (Task 2). Actionable findings ship; taste-only or out-of-scope requests are deferred with stated reasons.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Clarity</span>
+          <h3>One primary conversion path</h3>
+          <p>Book Visit is always available. Lodging and attractions deep-link into the inquiry form so tourists never dump into a single jumbled page without a next step.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Accessibility</span>
+          <h3>Inclusive by default</h3>
+          <p>Skip link, semantic landmarks, visible focus, aria-expanded menu, aria-current page, and form labels with live success messaging—aligned with WCAG 2.2 perceivable/operable patterns for a public tourism site.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Mobile</span>
+          <h3>Small screens first</h3>
+          <p>Responsive layout and a real mobile menu address the legacy site’s mobile incompatibility—critical for first-time planners reviewing options on a commute.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Honesty</span>
+          <h3>No fake “done”</h3>
+          <p>Filters, booking deep-links, and form confirmation actually work in the deployed prototype. Placeholders are labeled as inquiries, not invented live inventory backends.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Objective task coverage</h2>
+      <p class="lede">The five Task 2 usability tasks exercise navigation, filtering, deep-link booking, form success, and fact-finding—so peer reviews stress real task success, not visual preference alone.</p>
+      <p><a class="btn btn-primary" href="book.html">Try the booking path</a>
+      <a class="btn btn-outline" href="wireframes.html">View wireframes</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Visit Taniti — production-minded UX prototype (WGU D479 / HJN1).</p>
+      <p><a href="index.html">Home</a> · <a href="wireframes.html">Wireframes</a></p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

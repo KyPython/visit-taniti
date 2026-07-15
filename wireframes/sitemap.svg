@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480" role="img" aria-labelledby="title desc">
+  <title id="title">Taniti site map wireframe</title>
+  <desc id="desc">Hierarchy from Home to six content pages and Book Visit as primary conversion path.</desc>
+  <rect width="900" height="480" fill="#f5f5f5"/>
+  <rect x="360" y="30" width="180" height="50" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="420" y="60" font-family="Arial" font-size="14" fill="#111">Home</text>
+
+  <line x1="450" y1="80" x2="450" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="80" y1="120" x2="820" y2="120" stroke="#333" stroke-width="2"/>
+
+  <rect x="20" y="150" width="120" height="44" fill="#fff" stroke="#333"/>
+  <rect x="160" y="150" width="120" height="44" fill="#fff" stroke="#333"/>
+  <rect x="300" y="150" width="120" height="44" fill="#fff" stroke="#333"/>
+  <rect x="440" y="150" width="120" height="44" fill="#fff" stroke="#333"/>
+  <rect x="580" y="150" width="120" height="44" fill="#fff" stroke="#333"/>
+  <rect x="720" y="150" width="140" height="44" fill="#bbb" stroke="#333"/>
+
+  <text x="50" y="177" font-family="Arial" font-size="12" fill="#111">Lodging</text>
+  <text x="185" y="177" font-family="Arial" font-size="12" fill="#111">Attractions</text>
+  <text x="335" y="177" font-family="Arial" font-size="12" fill="#111">Dining</text>
+  <text x="458" y="177" font-family="Arial" font-size="11" fill="#111">Getting Around</text>
+  <text x="600" y="177" font-family="Arial" font-size="12" fill="#111">Visitor Info</text>
+  <text x="750" y="177" font-family="Arial" font-size="12" fill="#111">Book Visit</text>
+
+  <line x1="80" y1="194" x2="80" y2="240" stroke="#333"/>
+  <line x1="220" y1="194" x2="220" y2="240" stroke="#333"/>
+  <line x1="790" y1="194" x2="790" y2="240" stroke="#333"/>
+
+  <rect x="20" y="250" width="120" height="36" fill="#eee" stroke="#666"/>
+  <rect x="20" y="300" width="120" height="36" fill="#eee" stroke="#666"/>
+  <text x="35" y="272" font-family="Arial" font-size="11" fill="#333">Budget filter</text>
+  <text x="30" y="322" font-family="Arial" font-size="11" fill="#333">Request booking</text>
+
+  <rect x="160" y="250" width="120" height="36" fill="#eee" stroke="#666"/>
+  <rect x="160" y="300" width="120" height="36" fill="#eee" stroke="#666"/>
+  <text x="185" y="272" font-family="Arial" font-size="11" fill="#333">Nature</text>
+  <text x="175" y="322" font-family="Arial" font-size="11" fill="#333">Merriton fun</text>
+
+  <rect x="720" y="250" width="140" height="120" fill="#eee" stroke="#666"/>
+  <text x="745" y="290" font-family="Arial" font-size="11" fill="#333">Inquiry form</text>
+  <text x="735" y="315" font-family="Arial" font-size="11" fill="#333">Confirmation</text>
+  <text x="740" y="340" font-family="Arial" font-size="11" fill="#333">state</text>
+
+  <text x="40" y="420" font-family="Arial" font-size="12" fill="#444">Persona alignment: first-time U.S. family / couple planners need clear IA, lodging choices, activity booking links, and mobile nav.</text>
+  <text x="40" y="445" font-family="Arial" font-size="12" fill="#444">Scenario fixes: no single jumbled page; booking path visible; mobile-compatible layout.</text>
+</svg>
