@@ -1,0 +1,13 @@
+{
+  "name": "@buildlogic/taniti-tourism",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WGU D479 / HJN1 Visit Taniti tourism website prototype",
+  "scripts": {
+    "start": "bash ./start-dev.sh",
+    "dev": "bash ./start-dev.sh",
+    "start:app": "bash ./start-dev.sh",
+    "test": "echo \"Static UX prototype — no unit tests\" && exit 0",
+    "build": "echo \"Static site — no build step\""
+  }
+}

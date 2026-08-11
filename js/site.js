@@ -55,6 +55,14 @@
         form.reportValidity();
         return;
       }
+      var start = document.getElementById("date-start");
+      var end = document.getElementById("date-end");
+      if (start && end && start.value && end.value && end.value < start.value) {
+        end.setCustomValidity("Departure date must be on or after arrival date.");
+        end.reportValidity();
+        end.setCustomValidity("");
+        return;
+      }
       status.textContent =
         "Thanks! Your trip inquiry was recorded in this prototype. A Taniti tourism advisor would follow up with lodging and activity options.";
       status.classList.add("is-visible");

@@ -64,13 +64,34 @@
           <label for="party">Party size</label>
           <input id="party" name="party" type="number" min="1" max="20" value="2" required>
         </div>
-        <div class="form-row">
-          <label for="dates">Approximate dates / length of stay</label>
-          <input id="dates" name="dates" type="text" placeholder="e.g., June 10–17 (7 days)" required>
+        <div class="form-row form-row-split">
+          <div>
+            <label for="date-start">Arrival date</label>
+            <input id="date-start" name="date-start" type="date" required>
+          </div>
+          <div>
+            <label for="date-end">Departure date</label>
+            <input id="date-end" name="date-end" type="date" required>
+          </div>
         </div>
+        <fieldset class="form-row interest-fieldset">
+          <legend>Activities of interest</legend>
+          <p class="field-hint">Select all that apply. Deep links from Attractions pre-check the matching option.</p>
+          <div class="checkbox-grid">
+            <label class="check-label"><input type="checkbox" name="activity" value="rainforest"> Rainforest / zip-lining</label>
+            <label class="check-label"><input type="checkbox" name="activity" value="volcano"> Volcano visit</label>
+            <label class="check-label"><input type="checkbox" name="activity" value="beach"> Beaches</label>
+            <label class="check-label"><input type="checkbox" name="activity" value="tour"> Boat / bus tours</label>
+            <label class="check-label"><input type="checkbox" name="activity" value="water"> Snorkeling / fishing</label>
+            <label class="check-label"><input type="checkbox" name="activity" value="museum"> Museum / culture</label>
+            <label class="check-label"><input type="checkbox" name="activity" value="nightlife"> Nightlife</label>
+            <label class="check-label"><input type="checkbox" name="activity" value="scenic"> Scenic / helicopter</label>
+            <label class="check-label"><input type="checkbox" name="activity" value="rental"> Rental car or bike info</label>
+          </div>
+        </fieldset>
         <div class="form-row">
-          <label for="interests">Activities of interest</label>
-          <textarea id="interests" name="interests" placeholder="Beaches, volcano tour, zip-lining, snorkeling…"></textarea>
+          <label for="interests">Other notes (optional)</label>
+          <textarea id="interests" name="interests" placeholder="Anything else a tourism advisor should know…"></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Submit booking inquiry</button>
         <p id="form-status" class="form-status" tabindex="-1" role="status" aria-live="polite"></p>
@@ -100,9 +121,9 @@
         if (arrive === "air" || arrive === "cruise") arriveSelect.value = arrive;
       }
       var activity = params.get("activity");
-      var interests = document.getElementById("interests");
-      if (activity && interests && !interests.value) {
-        interests.value = "Interested in: " + activity;
+      if (activity) {
+        var box = document.querySelector('input[name="activity"][value="' + activity + '"]');
+        if (box) box.checked = true;
       }
     })();
   </script>

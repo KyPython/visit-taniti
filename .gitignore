@@ -1,2 +1,8 @@
+logs/
+submission/
+node_modules/
+.vercel/
+*.log
 .DS_Store
-.vercel
+.deploy.env
+.vercel-token

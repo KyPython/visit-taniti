@@ -1,0 +1,9 @@
+.vercel
+logs
+submission
+node_modules
+*.log
+.DS_Store
+DEPLOY.md
+UPLOAD-THIS-FOLDER.txt
+PROTOTYPE-URL.txt

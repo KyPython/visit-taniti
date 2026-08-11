@@ -1,9 +1,7 @@
-# Archived — consolidated into LamportLogic
+# Visit Taniti
 
-This repository is **archived**. Canonical source of truth:
+WGU D479 / HJN1 tourism website prototype.
 
-**https://github.com/KyLamportLogic/LamportLogic**
+**Live:** https://visit-taniti-seven.vercel.app/
 
-Canonical path: `apps/demos/curriculum/taniti-tourism` (also WGU d279/d479 under `apps/curriculum/wgu/`).
-
-Do not open PRs here. Work continues in the LamportLogic monorepo.
+Task 2 updates apply peer usability feedback (currency FAQ, booking date pickers, activity checkboxes, Attractions heading clarity, Getting Around rental inquiry links).
