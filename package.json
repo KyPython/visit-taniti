@@ -7,7 +7,7 @@
     "start": "bash ./start-dev.sh",
     "dev": "bash ./start-dev.sh",
     "start:app": "bash ./start-dev.sh",
-    "test": "echo \"Static UX prototype — no unit tests\" && exit 0",
-    "build": "echo \"Static site — no build step\""
+    "test": "echo \"Static UX prototype \u2014 no unit tests\" && exit 0",
+    "build": "true"
   }
 }
