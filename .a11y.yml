@@ -1,0 +1,14 @@
+# Accessibility gate config — WCAG 2.2 Level A.
+# Static multi-page HTML site; no build step. Served from repo root.
+ui: true
+build: "true"
+preview: "npx --yes serve@14.2.4 . -l 4321"
+wait_on: "http://localhost:4321"
+urls:
+  - "http://localhost:4321/index.html"
+  - "http://localhost:4321/attractions.html"
+  - "http://localhost:4321/lodging.html"
+  - "http://localhost:4321/dining.html"
+  - "http://localhost:4321/transportation.html"
+  - "http://localhost:4321/visitor-info.html"
+  - "http://localhost:4321/book.html"
