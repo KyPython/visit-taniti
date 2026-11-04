@@ -7,7 +7,7 @@
     "start": "bash ./start-dev.sh",
     "dev": "bash ./start-dev.sh",
     "start:app": "bash ./start-dev.sh",
-    "test": "echo \"Static UX prototype \u2014 no unit tests\" && exit 0",
+    "test": "node --test tests/*.test.js",
     "build": "true"
   }
 }
