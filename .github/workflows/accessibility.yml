@@ -1,0 +1,32 @@
+# Accessibility + diff-hygiene gate (grace mode during rollout).
+# Consumes the shared reusable workflows from KyLamportLogic/buildlogic-governance.
+# Grace mode: runs and reports but does not block merge until branch protection
+# is enabled by a human after main is green (REQ-D3).
+name: Accessibility
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  level-a:
+    # Pinned to buildlogic-governance main SHA 893aba5 (PR #13 merged as 3a92328).
+    # SHA pin satisfies REQ-A6/J3 and policy/zizmor unpinned-action rules.
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    uses: KyLamportLogic/buildlogic-governance/.github/workflows/accessibility.reusable.yml@893aba560a69c091fe03313c5af19fe392ddf791
+    with:
+      governance-ref: 893aba560a69c091fe03313c5af19fe392ddf791
+
+  diff-hygiene:
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: KyLamportLogic/buildlogic-governance/.github/workflows/diff-hygiene.reusable.yml@893aba560a69c091fe03313c5af19fe392ddf791
+    with:
+      governance-ref: 893aba560a69c091fe03313c5af19fe392ddf791
