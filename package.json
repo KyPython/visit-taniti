@@ -2,12 +2,13 @@
   "name": "@buildlogic/taniti-tourism",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@10.30.3",
   "description": "WGU D479 / HJN1 Visit Taniti tourism website prototype",
   "scripts": {
     "start": "bash ./start-dev.sh",
     "dev": "bash ./start-dev.sh",
     "start:app": "bash ./start-dev.sh",
-    "test": "echo \"Static UX prototype \u2014 no unit tests\" && exit 0",
-    "build": "true"
+    "test": "python3 -B -m unittest discover -s tests -p 'test_*.py' && python3 -B scripts/check_static_site.py",
+    "build": "pnpm test && node --check js/site.js"
   }
 }
