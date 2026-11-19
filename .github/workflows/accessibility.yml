@@ -10,18 +10,23 @@ on:
 
 permissions:
   contents: read
-  checks: write
-  pull-requests: write
 
 jobs:
   level-a:
-    # governance-ref pinned to the rollout branch until PR #13 merges to main,
-    # then repin to the merged commit SHA (REQ-A6/J3).
-    uses: KyLamportLogic/buildlogic-governance/.github/workflows/accessibility.reusable.yml@spec/accessibility-enforcement
+    # Pinned to buildlogic-governance main SHA 893aba5 (PR #13 merged as 3a92328).
+    # SHA pin satisfies REQ-A6/J3 and policy/zizmor unpinned-action rules.
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    uses: KyLamportLogic/buildlogic-governance/.github/workflows/accessibility.reusable.yml@893aba560a69c091fe03313c5af19fe392ddf791
     with:
-      governance-ref: spec/accessibility-enforcement
+      governance-ref: 893aba560a69c091fe03313c5af19fe392ddf791
 
   diff-hygiene:
-    uses: KyLamportLogic/buildlogic-governance/.github/workflows/diff-hygiene.reusable.yml@spec/accessibility-enforcement
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: KyLamportLogic/buildlogic-governance/.github/workflows/diff-hygiene.reusable.yml@893aba560a69c091fe03313c5af19fe392ddf791
     with:
-      governance-ref: spec/accessibility-enforcement
+      governance-ref: 893aba560a69c091fe03313c5af19fe392ddf791
